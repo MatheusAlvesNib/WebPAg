@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>.:NIBGC:. &mdash; Project streaming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
+
+	
+  	<!-- Facebook and Twitter integration 
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />-->
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+        .item {
+  align-self: stretch;
+  padding: 2rem 0;
+  text-align: center;
+  outline: none;
+}
+.item:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+.item h3 {
+  margin: 0 0 10px 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #666;
+}
+
+.knob-wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.light {
+  display: inline-block;
+  width: calc( calc( 8rem / 2 ) / 2.5 );
+  height: calc( calc( 8rem / 2 ) / 2.5 );
+  border-radius: 100%;
+  background-color: #ddd;
+  margin: 0 0 0 1rem;
+  box-shadow: 0 0 0 0.25rem #cacaca;
+  -webkit-transition: background 400ms ease;
+  transition: background 400ms ease;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 8rem;
+  height: calc( 8rem / 2 );
+  background-color: #ddd;
+  border-radius: calc( 8rem / 2 );
+  outline: none;
+  -webkit-transition: background 450ms ease;
+  transition: background 450ms ease;
+  box-shadow: 0 0 0 3px #cacaca;
+}
+input[type="checkbox"]:before, input[type="checkbox"]:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 100%;
+  -webkit-transition: background 450ms ease, -webkit-transform 450ms ease;
+  transition: background 450ms ease, -webkit-transform 450ms ease;
+  transition: background 450ms ease, transform 450ms ease;
+  transition: background 450ms ease, transform 450ms ease, -webkit-transform 450ms ease;
+}
+input[type="checkbox"]:before {
+  width: calc( 8rem / 2 );
+  height: calc( 8rem / 2 );
+  background-color: #E53935;
+}
+input[type="checkbox"]:checked:before {
+  background-color: #43A047;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+input[type="checkbox"].conic {
+  -webkit-transition: background 450ms ease, -webkit-transform 450ms ease;
+  transition: background 450ms ease, -webkit-transform 450ms ease;
+  transition: background 450ms ease, transform 450ms ease;
+  transition: background 450ms ease, transform 450ms ease, -webkit-transform 450ms ease;
+}
+input[type="checkbox"].conic:before {
+  box-shadow: inset 0 0 0 3px #9f1815;
+  background: conic-gradient(#E53935, #9f1815);
+}
+input[type="checkbox"].conic:checked:before {
+  box-shadow: inset 0 0 0 3px #255827;
+  background: conic-gradient(#43A047, #255827);
+  -webkit-transform: translateX(100%) rotate(360deg);
+          transform: translateX(100%) rotate(360deg);
+}
+input[type="checkbox"].knob {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #b7b7b7), to(#ddd));
+  background: linear-gradient(to bottom, #b7b7b7 25%, #ddd 100%);
+}
+input[type="checkbox"].knob:before, input[type="checkbox"].knob:after {
+  -webkit-transform: translate(0, -2px) rotate(0deg);
+          transform: translate(0, -2px) rotate(0deg);
+}
+input[type="checkbox"].knob:before {
+  box-shadow: 0 0 0 1px #ddd, 0 0 0 1px #777;
+  background: conic-gradient(#ddd, #aaaaaa);
+}
+input[type="checkbox"].knob:after {
+  width: calc( 8rem / 2 );
+  height: calc( 8rem / 2 );
+  box-shadow: inset 0 0 0 1.5px #919191, 1.5px 1.5px 0 0 #9d9d9d, 2.5px 2.5px 0 0 #9d9d9d, 3px 3px 0 0 #9d9d9d;
+}
+input[type="checkbox"].knob:checked:before {
+  -webkit-transform: translate(100%, -2px) rotate(360deg);
+          transform: translate(100%, -2px) rotate(360deg);
+}
+input[type="checkbox"].knob:checked:after {
+  -webkit-transform: translate(100%, -2px);
+          transform: translate(100%, -2px);
+}
+input[type="checkbox"].knob:checked + .light {
+  background-color: #FFFF00;
+}
+
+    </style>
+
+	</head>
+	<body>
+
+	
+
+	
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num"><a target="_blank" href="https://api.whatsapp.com/send?phone=5592993302106"><i class="icon-whatsapp"></i>+55 92 99330-2106</a></p>
+						<ul class="fh5co-social">
+							<li><a target="_blank" href="https://www.facebook.com/NIBGCIRCULAR"><i class="icon-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/nibgrandecircular/"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-1">
+						<div id="fh5co-logo navbar-left">
+							<a href="#"><img src="images/logo(3).png"  alt="NIBGC"/></a>
+						</div>
+					</div>
+					<div class="col-xs-11 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Início</a></li>
+							<!--
+							<li><a href="courses.html">Courses</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li class="has-dropdown">
+								<a href="blog.html">Blog</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Create a Course</span></a></li>-->
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box embed-responsive-item" data-animate-effect="fadeIn">
+							<h1>Culto online</h1>
+							<div class="embed-responsive embed-responsive-16by9">
+								
+							
+   
+                <form class="text-center border border-light p-5" action="/alterar" method="POST" enctype="multipart/form-data">
+
+                    <p class="h4 mb-4" style="color: white;">Login</p>
+                
+                    <p style="color: white;">Use senha para modificar</p>
+                
+                
+                    <!-- Name -->
+                    
+                    <input type="text" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Insira URL" name="url" id="senhaaut" autocomplete="off" style="background-color: white;margin-top: 1%;" >
+                
+
+                    <input type="password" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Senha" name="senha" id="senhaaut" autocomplete="off" style="background-color: white;margin-top: 1%;" >
+
+             
+                
+                    <button class="btn btn-block" type="submit" style="color:#fff;background-color: #FF9800; margin-top: 1%; " >Acessar</button>
+                
+                
+                </form>
+           
+	  
+							</div>
+							<h2>Todos os Domingos as 19h30.</h2>
+						</div>
+					</div>
+					<!--<div class="display-t">
+						<div class="display-tc animate-box embed-responsive-item" data-animate-effect="fadeIn">
+							<h1>Culto online</h1>
+							<h2><a href="" target="_blank">Todos os Domingos as 19h30.</a></h2>
+							<iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FNIBGCIRCULAR%2Fvideos%2F881947048911352%2F&width=500&show_text=true&height=347&appId" 
+							width="690" height="479" style="border:none;overflow:hidden" scrolling="no" frameborder="0" 
+							allowTransparency="true" allow="encrypted-media"></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/8uoxEhJSILo" 
+							frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen></iframe>
+						</div>
+						
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			
+				<div class="row row-pb-md">
+						<div class="col-md-3 fh5co-widget">
+							
+						</div>
+						
+		
+						<div class="col-md-4 col-sm-4 col-xs-6 col-md-push-1">
+							<h4>Nossos horários</h4>
+							<ul class="fh5co-footer-links">
+								<li><b>Sexta-feixa</b></li>
+								<li>Nova Teens (12-14 anos): 19h00</li></br>
+								<li><b>Sábado</b></li>
+								<li>Amazon Jovens(15-30 anos): 19h00</li></br>
+								<li><b>Domingo</b></li>
+								<li>Senib - Seminário: 9h00</li>
+								<li>1º Culto: 17h30</li>
+								<li>2º Culto: 19h30</li>
+
+							</ul>
+						</div>
+		
+						<div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+							<h4>Nosso Endereço</h4>
+							<ul class="fh5co-footer-links">
+								<li>Av. Grande Circular, 7761</li>
+								<li>Tancredo Neves</li>
+								<li>CEP: 69087-215</li>
+								<li>Manaus – Amazonas– Brasil</li>
+							</ul>
+						</div>
+		
+						<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+							<h4>Nossos telefones</h4>
+							<ul class="fh5co-footer-links">
+								<li><a target="_blank" href="https://api.whatsapp.com/send?phone=5592993302106"><i class="icon-whatsapp"></i>+55 92 99330-2106</a></li>
+							</ul>
+						</div>
+					</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2020 NIB GRANDE CIRCULAR. Todos os direitos reservados.</small> 
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a target="_blank" href="https://www.facebook.com/NIBGCIRCULAR"><i class="icon-facebook"></i></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/nibgrandecircular/"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+    </body>
+    
+    <script src="/socket.io/socket.io.js"> </script>
+     
+    <script>
+        
+        var sockett = io('http://localhost:3002');
+        
+
+        sockett.on("",function(data){
+    
+       
+          
+
+
+       })
+
+
+    </script>
+
+
+</html>
+
